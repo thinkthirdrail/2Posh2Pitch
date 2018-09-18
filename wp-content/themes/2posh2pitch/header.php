@@ -5,6 +5,7 @@
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title><?php echo title_tag(); ?></title>
+    <link rel="stylesheet" href="https://use.typekit.net/cjd4mgc.css">
 <?php wp_head(); ?>
 </head>
 <body <?php body_class(); ?>>
