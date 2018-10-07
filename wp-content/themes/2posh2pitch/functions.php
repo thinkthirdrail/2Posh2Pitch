@@ -4,7 +4,7 @@
 
 function posh_enqueue_style() {
     wp_enqueue_style( 'main-style', get_stylesheet_directory_uri() . '/css/theme.css' );
-    wp_enqueue_script( 'main-script', get_stylesheet_directory_uri() . '/js/min/theme.min.js' , array( 'jquery' ), null, true);
+    wp_enqueue_script( 'main-script', get_stylesheet_directory_uri() . '/js/min/theme-min.js' , array( 'jquery' ), null, true);
 }
 
 add_action( 'wp_enqueue_scripts', 'posh_enqueue_style' );
