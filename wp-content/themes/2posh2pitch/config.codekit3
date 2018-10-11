@@ -18,10 +18,21 @@
 		},
 	"/assets/img/bg.jpg": {
 		"ft": 16384,
-		"iS": 135734,
+		"iS": 12694397,
 		"jF": 0,
 		"oA": 0,
 		"oAP": "/assets/img/bg.jpg",
+		"oF": 0,
+		"oIPL": 0,
+		"opt": 0,
+		"q": 100
+		},
+	"/assets/img/bgold.jpg": {
+		"ft": 16384,
+		"iS": 135734,
+		"jF": 0,
+		"oA": 0,
+		"oAP": "/assets/img/bgold.jpg",
 		"oF": 0,
 		"oIPL": 0,
 		"opt": 0,

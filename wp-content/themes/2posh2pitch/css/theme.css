@@ -38,7 +38,7 @@ table {
 p {
   font-size: 90%;
   line-height: 1.5;
-  font-family: "neo-sans",sans-serif;
+  font-family: "priori-sans",sans-serif;
   color: #393939; }
   p + p {
     margin-top: 1.5em; }
@@ -55,7 +55,7 @@ h1 {
   z-index: 9999; }
 
 h2 {
-  font-family: "neo-sans",sans-serif;
+  font-family: "priori-sans",sans-serif;
   font-size: 0.8em;
   text-transform: uppercase;
   letter-spacing: 2px;
@@ -78,7 +78,7 @@ h3 {
   width: 100px; }
 
 .button-blue, .button-white {
-  border: 1px solid #ccc;
+  border: 1px solid #CFDBC5;
   padding: 1em 2em;
   text-transform: uppercase;
   font-size: 0.8em;
@@ -92,11 +92,16 @@ h3 {
   width: 70%; }
 
 .button-blue {
-  background-color: #aec6da;
+  background-color: #CFDBC5;
   margin: 1em 0; }
 
 .button-white {
-  background-color: #ffffff; }
+  background-color: #ffffff;
+  margin: 1em 0;
+  transition: all ease 150ms; }
+  .button-white:hover {
+    background-color: #CFDBC5;
+    color: #ffffff; }
 
 .fa-times {
   color: #e7e9ed;
@@ -106,7 +111,7 @@ h3 {
   position: absolute; }
 
 .blue-block {
-  background-color: #aec6da; }
+  background-color: #CFDBC5; }
 
 .grey-block {
   background-color: #e7e9ed; }
@@ -133,14 +138,14 @@ h3 {
         position: absolute;
         width: 100%;
         height: 2px;
-        background-color: #aec6da;
+        background-color: #CFDBC5;
         left: 0;
         top: 0;
         bottom: 0;
         margin: auto; }
   .banner .overlay {
     background-color: #393939;
-    opacity: 0.5;
+    opacity: 0.3;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -175,7 +180,7 @@ h3 {
     text-align: right; }
     .banner .tag::after {
       content: "";
-      background-color: #aec6da;
+      background-color: #CFDBC5;
       width: 2px;
       height: 200px;
       position: absolute;
@@ -196,16 +201,20 @@ h3 {
     height: 50%;
     left: 0; }
     .pre-blog .blue-block .offset-box {
-      transform: translateX(50%) translateY(30%); }
-      .pre-blog .blue-block .offset-box p:first-of-type {
-        font-weight: bolder;
-        font-variant: small-caps;
-        text-transform: lowercase; }
+      transform: translateX(50%) translateY(50%); }
+      .pre-blog .blue-block .offset-box p {
+        font-size: 90%; }
+        .pre-blog .blue-block .offset-box p:first-of-type {
+          font-size: 100%;
+          font-weight: 600;
+          text-transform: lowercase;
+          font-style: oblique;
+          color: #747474; }
   .pre-blog .head-text {
     position: relative;
     padding-bottom: 2em; }
     .pre-blog .head-text span {
-      background: #aec6da; }
+      background: #CFDBC5; }
     .pre-blog .head-text h2::before {
       background-color: #98b7cf; }
     .pre-blog .head-text i {

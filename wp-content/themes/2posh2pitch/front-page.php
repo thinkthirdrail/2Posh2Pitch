@@ -31,6 +31,9 @@
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra, dolor et lacinia ornare, nibh ante mollis enim, ac convallis libero sem id massa. Maecenas ligula purus, vulputate at massa quis, consequat pharetra urna. Duis eget orci euismod, molestie lorem vel, venenatis magna.
                 </p>
+                <p>
+                    Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra, dolor et lacinia ornare, nibh ante mollis enim, ac convallis libero sem id massa. Maecenas ligula purus, vulputate at massa quis, consequat pharetra urna. Duis eget orci euismod, molestie lorem vel, venenatis magna.
+                </p>
             </div>
         </div>
         <div class="grey-block"></div>
