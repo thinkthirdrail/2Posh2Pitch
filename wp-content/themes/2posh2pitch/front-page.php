@@ -1,6 +1,21 @@
 <?php get_header(); ?>
 
 <section class="banner">
+    <div class="venue">
+        <div class="venue-content">
+            <div class="venue-desc">
+                <p class="close">X CLOSE</p>
+                <h2>Burnham Breck</h2>
+                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra, dolor et lacinia ornare, nibh ante mollis enim, ac convallis libero sem id massa. Maecenas ligula purus, vulputate at massa quis, consequat pharetra urna. Duis eget orci euismod, molestie lorem vel, venenatis magna.</p>
+                <div class="buttons">
+                    <div class="button-blue"><p>Find out more</p><i class="fas fa-arrow-right"></i></div>
+                </div>
+            </div>
+            <div class="venue-image">
+                <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/image.jpg" />
+            </div>
+        </div>
+    </div>
     <!-- <iframe width="560" height="315" src="https://www.youtube.com/embed/eWdj5_v5YAQ?rel=0&amp;controls=0&amp;loop=1&playlist=eWdj5_v5YAQ;showinfo=0;autoplay=1;start=29;end=31;" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen></iframe> -->
     <div class="cta">
         <i class="fas fa-times"></i>
@@ -74,8 +89,17 @@
                 <h3>Lorem ipsum dolor sit amet.</h3>
                 <div class="divider"></div>
                 <h2>12th January 2018</h2>
+                <i class="fas fa-ghost"></i>
             </div>
         </div>
+    </div>
+</section>
+<section class="gallery">
+    <div class="image-block">
+        <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/image.jpg" />
+    </div>
+    <div class="description-block">
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
 </section>
 <section class="post-blog">

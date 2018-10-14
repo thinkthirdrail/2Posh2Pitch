@@ -99,7 +99,7 @@ h3 {
   position: absolute;
   left: 5%;
   top: 2em;
-  z-index: 9999;
+  z-index: 1;
   width: 100px; }
 
 .button-blue, .button-white {
@@ -168,6 +168,10 @@ h3 {
   background-image: url("../assets/img/bg.jpg");
   background-attachment: fixed;
   background-size: cover; }
+  .banner .overlay {
+    transition: opacity ease 300ms; }
+    .banner .overlay.active {
+      opacity: 0.8; }
   .banner i.fa-times {
     padding-bottom: 20px; }
   .banner .head-text {
@@ -194,6 +198,58 @@ h3 {
   .banner iframe {
     width: 100%;
     height: 100%; }
+  .banner .venue {
+    height: 70%;
+    width: 30%;
+    background: white;
+    position: absolute;
+    right: 5%;
+    top: 0;
+    bottom: 0;
+    margin: auto;
+    min-width: 300px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    transition: width ease 500ms, transform ease 500ms;
+    z-index: 2; }
+    .banner .venue.active {
+      transform: translateX(-50%);
+      transition: width ease 500ms, transform ease 500ms;
+      width: 60%; }
+    .banner .venue .venue-content {
+      width: 100%;
+      height: 100%;
+      display: flex;
+      display: none; }
+      .banner .venue .venue-content .venue-image {
+        width: 40%;
+        height: 100%; }
+        .banner .venue .venue-content .venue-image img {
+          object-fit: cover;
+          height: 100%;
+          width: 100%; }
+      .banner .venue .venue-content .venue-desc {
+        width: 60%;
+        height: 100%;
+        padding: 3em;
+        box-sizing: border-box;
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        overflow: scroll; }
+        .banner .venue .venue-content .venue-desc .buttons {
+          margin-top: 1em; }
+        .banner .venue .venue-content .venue-desc h2 {
+          font-size: 2em;
+          padding-bottom: 1em; }
+        .banner .venue .venue-content .venue-desc p.close {
+          position: absolute;
+          left: 20px;
+          top: 20px; }
+          .banner .venue .venue-content .venue-desc p.close:hover {
+            cursor: pointer; }
   .banner .cta {
     box-shadow: rgba(0, 0, 0, 0) 0 0 30px 0;
     height: 70%;
@@ -210,10 +266,8 @@ h3 {
     align-items: center;
     justify-content: center;
     flex-direction: column;
-    z-index: 9999;
-    transition: box-shadow ease 250ms; }
-    .banner .cta:hover {
-      box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 110px -20px; }
+    transition: box-shadow ease 250ms;
+    z-index: 9999; }
     .banner .cta p {
       font-size: 100%; }
     .banner .cta .social {
@@ -249,6 +303,8 @@ h3 {
         color: #CFDBC5; }
     .banner .cta:hover + .overlay {
       box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px; }
+    .banner .cta.active {
+      box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 110px -20px; }
   .banner .tag {
     color: #ffffff;
     font-size: 1.5em;
@@ -273,8 +329,6 @@ h3 {
   position: relative;
   display: flex;
   align-items: center; }
-  .pre-blog i {
-    color: #CFDBC5; }
   .pre-blog .wrapper {
     width: 60%;
     display: flex;
@@ -287,12 +341,22 @@ h3 {
       width: 50%;
       padding-top: 2em; }
   .pre-blog .left-block {
+    position: relative;
     width: 60%; }
     .pre-blog .left-block p {
       color: #9a9185;
       line-height: 1.4; }
       .pre-blog .left-block p:first-of-type {
         font-weight: bolder; }
+    .pre-blog .left-block .dog {
+      position: absolute;
+      bottom: 20px;
+      right: 20px;
+      text-align: center; }
+      .pre-blog .left-block .dog svg {
+        width: 10%; }
+        .pre-blog .left-block .dog svg path {
+          fill: #CFDBC5; }
   .pre-blog .right-block {
     width: 40%; }
     .pre-blog .right-block p {
@@ -416,12 +480,46 @@ h3 {
           text-transform: uppercase;
           font-weight: bold; }
 
+.gallery {
+  height: 100vh;
+  max-height: 1200px;
+  display: flex; }
+  .gallery .image-block {
+    width: 60%;
+    background: red;
+    height: 100vh;
+    object-fit: cover; }
+    .gallery .image-block img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover; }
+  .gallery .description-block {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 40%;
+    box-sizing: border-box; }
+    .gallery .description-block p {
+      font-size: 2em;
+      color: #9a9185;
+      width: 60%;
+      position: relative; }
+      .gallery .description-block p::after {
+        content: "";
+        position: absolute;
+        bottom: -10%;
+        left: -30%;
+        height: 2px;
+        background: #CFDBC5;
+        width: 80%; }
+
 .post-blog {
-  min-height: 100vh;
+  min-height: 50vh;
   max-height: 1200px; }
   .post-blog .right-block {
+    background-color: #e7e9ed;
     width: 50%;
-    height: 100vh;
+    height: 100%;
     max-height: 1200px;
     float: left; }
   .post-blog .left-block {
