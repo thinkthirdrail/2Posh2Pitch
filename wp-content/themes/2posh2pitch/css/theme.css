@@ -210,7 +210,7 @@ h3 {
     justify-content: center;
     flex-direction: column;
     z-index: 9999;
-    transition: all ease 250ms; }
+    transition: box-shadow ease 250ms; }
     .banner .cta:hover {
       box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 110px -20px; }
     .banner .cta p {
@@ -220,10 +220,11 @@ h3 {
       align-items: center;
       justify-content: space-between;
       position: absolute;
-      bottom: -57px;
+      bottom: -45px;
       left: 0;
       right: 0;
-      margin: auto; }
+      margin: auto;
+      background: rgba(51, 51, 51, 0.7); }
       .banner .cta .social a {
         transition: background ease 250ms;
         padding: 0.5em 1em; }
@@ -299,17 +300,6 @@ h3 {
       color: #9a9185;
       position: relative;
       font-style: italic; }
-      .pre-blog .right-block p::after {
-        content: 'John Smith';
-        position: absolute;
-        bottom: -20%;
-        margin: auto;
-        left: 0;
-        text-align: center;
-        font-size: 0.3em;
-        text-transform: uppercase;
-        color: #9a9185;
-        font-family: "neo-sans",sans-serif; }
       .pre-blog .right-block p::before {
         content: '“';
         position: absolute;

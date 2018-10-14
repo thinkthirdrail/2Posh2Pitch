@@ -226,7 +226,7 @@ h3 {
         justify-content: center;
         flex-direction: column;
         z-index: 9999;
-        transition: all ease 250ms;
+        transition: box-shadow ease 250ms;
         &:hover {
             box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 110px -20px;
         }
@@ -238,11 +238,11 @@ h3 {
             align-items: center;
             justify-content: space-between;
             position: absolute;
-            bottom: -57px;
+            bottom: -45px;
             left: 0;
             right: 0;
             margin: auto;
-            // background: rgba($white, 0.7);
+            background: rgba($dark-grey, 0.7);
             a {
                 transition: background ease 250ms;
                 &:link {
@@ -342,18 +342,6 @@ h3 {
             color: $title;
             position: relative;
             font-style: italic;
-            &::after {
-                content: 'John Smith';
-                position: absolute;
-                bottom: -20%;
-                margin: auto;
-                left: 0;
-                text-align: center;
-                font-size: 0.3em;
-                text-transform: uppercase;
-                color: $title;
-                font-family: "neo-sans",sans-serif;
-            }
             &::before {
                 content: '“';
                 position: absolute;
