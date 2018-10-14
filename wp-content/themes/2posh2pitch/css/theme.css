@@ -247,7 +247,9 @@ h3 {
         .banner .venue .venue-content .venue-desc p.close {
           position: absolute;
           left: 20px;
-          top: 20px; }
+          top: 20px;
+          font-size: 1.2em;
+          font-weight: bold; }
           .banner .venue .venue-content .venue-desc p.close:hover {
             cursor: pointer; }
   .banner .cta {
@@ -303,8 +305,6 @@ h3 {
         color: #CFDBC5; }
     .banner .cta:hover + .overlay {
       box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px; }
-    .banner .cta.active {
-      box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 110px -20px; }
   .banner .tag {
     color: #ffffff;
     font-size: 1.5em;

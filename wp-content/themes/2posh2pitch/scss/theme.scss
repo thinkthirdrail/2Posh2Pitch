@@ -272,6 +272,8 @@ h3 {
                         position: absolute;
                         left: 20px;
                         top: 20px;
+                        font-size: 1.2em;
+                        font-weight: bold;
                         &:hover {
                             cursor: pointer;
                         }
@@ -351,9 +353,9 @@ h3 {
                 box-shadow: rgba(0, 0, 0, 0.5) 0 0 10px;
             }
         }
-        &.active {
-            box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 110px -20px;
-        }
+        // &.active {
+        //     box-shadow: rgba(0, 0, 0, 0.5) 0px 0px 110px -20px;
+        // }
     }
     .tag {
         color: $white;
