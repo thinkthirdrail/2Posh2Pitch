@@ -399,10 +399,6 @@ h3 {
     position: relative; }
     .pre-blog .head-text h2::before {
       background-color: #98b7cf; }
-    .pre-blog .head-text i {
-      position: absolute;
-      left: -10%;
-      top: -5px; }
 
 .home-blog {
   width: 100%;

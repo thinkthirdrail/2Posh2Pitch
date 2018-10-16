@@ -45,9 +45,9 @@
         <div class="left-block">
             <main class="wrapper">
                 <div class="head-text">
+                    <i class="fas fa-times"></i>
                     <h1>Luxury</h1>
                     <h2><span>Bell tent hire</span></h2>
-                    <i class="fas fa-times"></i>
                 </div>
                 <div class="divider"></div>
                 <p>
@@ -85,7 +85,6 @@
             <div class="overlay"></div>
         </div>
         <div class="blog-content">
-            <i class="fas fa-times"></i>
             <div class="head-text">
                 <h2>12th January 2018</h2>
                 <div class="divider"></div>
@@ -107,7 +106,9 @@
 </section>
 <section class="post-blog">
     <div class="left-block">
+
         <div class="head-text">
+            <i class="fas fa-times"></i>
             <h1>Booked?</h1>
             <h2><span>Select your pitch</span></h2>
         </div>
@@ -119,6 +120,7 @@
     </div>
     <div class="right-block">
         <div class="head-text">
+            <i class="fas fa-times"></i>
             <h1>Sign up</h1>
             <h2><span>and receive latest offers</span></h2>
         </div>
