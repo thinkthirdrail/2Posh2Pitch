@@ -17,6 +17,7 @@ p {
     line-height: 1.5;
     font-family: "priori-sans",sans-serif;
     color: $dark-grey;
+    font-variant: discretionary-ligatures;
     &+p {
         margin-top: 1.5em;
     }
@@ -68,10 +69,10 @@ h3 {
 }
 
 .divider {
-    width: 50%;
-    height: 2px;
+    width: 20%;
+    height: 5px;
     background-color: $light-blue;
-    margin: 1em 0;
+    margin: 1.5em 0;
 }
 
 #main-logo {
@@ -196,7 +197,7 @@ h3 {
                 content: "";
                 position: absolute;
                 width: 100%;
-                height: 2px;
+                height: 5px;
                 background-color: $light-blue;
                 left: 0;
                 top: 0;
@@ -368,7 +369,7 @@ h3 {
         &::after {
             content: "";
             background-color: $light-blue;
-            width: 2px;
+            width: 5px;
             height: 200px;
             position: absolute;
             right: -10%;
@@ -471,7 +472,7 @@ h3 {
     }
     .head-text {
         position: relative;
-        padding-bottom: 2em;
+        // padding-bottom: 2em;
         span {
             // background: $light-blue;
         }
@@ -585,6 +586,8 @@ h3 {
     height: 100vh;
     max-height: 1200px;
     display: flex;
+    background-color: $light-grey;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2399b085' fill-opacity='0.68' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
     .image-block {
         width: 60%;
         background: red;
@@ -602,19 +605,33 @@ h3 {
         justify-content: center;
         width: 40%;
         box-sizing: border-box;
+        flex-direction: column;
+        .slide-nav {
+            display: flex;
+            padding-bottom: 2em;
+            i {
+                padding: 5px;
+                font-size: 2em;
+                color: $light-blue;
+                &:hover {
+                    color: $title;
+                }
+            }
+        }
         p {
             font-size: 2em;
             color: $title;
-            width: 60%;
+            width: 80%;
             position: relative;
+            text-align: center;
             &::after {
                 content: "";
                 position: absolute;
-                bottom: -10%;
+                bottom: -1em;
                 left: -30%;
-                height: 2px;
+                height: 5px;
                 background: $light-blue;
-                width: 80%;
+                width: 70%;
             }
         }
     }
@@ -623,18 +640,73 @@ h3 {
 .post-blog {
     min-height: 50vh;
     max-height: 1200px;
-    // background: $light-grey;
-    .right-block {
-        background-color: $light-grey;
-        width: 50%;
-        height: 100%;
-        max-height: 1200px;
-        float: left;
+    width: 90%;
+    margin: 0 auto;
+    .buttons {
+        // margin-top: 2em;
     }
-    .left-block {
+    .left-block, .right-block {
         width: 50%;
-        // background: blue;
-        height: 50vh;
+        min-height: 50vh;
         float: left;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-direction: column;
+        padding: 5em 0;
+        // box-sizing: border-box;
+        .input-fields {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            input {
+                border: none;
+                border-bottom: 1px solid #CFDBC5;
+                font-family: "priori-sans",sans-serif;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                padding: 1.5em 2em;
+                text-transform: uppercase;
+                text-align: center;
+                width: 70%;
+                font-size: 0.8em;
+                letter-spacing: 3px;
+                box-sizing: border-box;
+                margin-bottom: 1em;
+                // margin-top: 3em;
+                +input {
+                    margin: 0;
+                }
+                &[placeholder] {
+                    font-size: 0.8em;
+                    letter-spacing: 3px;
+                }
+            }
+        }
+    }
+    .right-block {
+        .buttons {
+            margin: 0;
+        }
+    }
+}
+
+.credit {
+    width: 100%;
+    height: 100px;
+    background-color: $light-grey;
+    clear: both;
+    position: relative;
+    img {
+        &#credit {
+            position: absolute;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            margin: auto;
+        }
     }
 }

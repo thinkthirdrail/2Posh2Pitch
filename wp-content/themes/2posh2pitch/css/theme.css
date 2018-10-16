@@ -45,7 +45,8 @@ p {
   font-size: 1em;
   line-height: 1.5;
   font-family: "priori-sans",sans-serif;
-  color: #333333; }
+  color: #333333;
+  font-variant: discretionary-ligatures; }
   p + p {
     margin-top: 1.5em; }
 
@@ -90,10 +91,10 @@ h3 {
   margin: 0 auto; }
 
 .divider {
-  width: 50%;
-  height: 2px;
+  width: 20%;
+  height: 5px;
   background-color: #CFDBC5;
-  margin: 1em 0; }
+  margin: 1.5em 0; }
 
 #main-logo {
   position: absolute;
@@ -189,7 +190,7 @@ h3 {
         content: "";
         position: absolute;
         width: 100%;
-        height: 2px;
+        height: 5px;
         background-color: #CFDBC5;
         left: 0;
         top: 0;
@@ -316,7 +317,7 @@ h3 {
     .banner .tag::after {
       content: "";
       background-color: #CFDBC5;
-      width: 2px;
+      width: 5px;
       height: 200px;
       position: absolute;
       right: -10%;
@@ -395,8 +396,7 @@ h3 {
     opacity: 0.5;
     display: none; }
   .pre-blog .head-text {
-    position: relative;
-    padding-bottom: 2em; }
+    position: relative; }
     .pre-blog .head-text h2::before {
       background-color: #98b7cf; }
     .pre-blog .head-text i {
@@ -483,7 +483,9 @@ h3 {
 .gallery {
   height: 100vh;
   max-height: 1200px;
-  display: flex; }
+  display: flex;
+  background-color: #e7e9ed;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%2399b085' fill-opacity='0.68' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E"); }
   .gallery .image-block {
     width: 60%;
     background: red;
@@ -498,31 +500,84 @@ h3 {
     align-items: center;
     justify-content: center;
     width: 40%;
-    box-sizing: border-box; }
+    box-sizing: border-box;
+    flex-direction: column; }
+    .gallery .description-block .slide-nav {
+      display: flex;
+      padding-bottom: 2em; }
+      .gallery .description-block .slide-nav i {
+        padding: 5px;
+        font-size: 2em;
+        color: #CFDBC5; }
+        .gallery .description-block .slide-nav i:hover {
+          color: #9a9185; }
     .gallery .description-block p {
       font-size: 2em;
       color: #9a9185;
-      width: 60%;
-      position: relative; }
+      width: 80%;
+      position: relative;
+      text-align: center; }
       .gallery .description-block p::after {
         content: "";
         position: absolute;
-        bottom: -10%;
+        bottom: -1em;
         left: -30%;
-        height: 2px;
+        height: 5px;
         background: #CFDBC5;
-        width: 80%; }
+        width: 70%; }
 
 .post-blog {
   min-height: 50vh;
-  max-height: 1200px; }
-  .post-blog .right-block {
-    background-color: #e7e9ed;
+  max-height: 1200px;
+  width: 90%;
+  margin: 0 auto; }
+  .post-blog .left-block, .post-blog .right-block {
     width: 50%;
-    height: 100%;
-    max-height: 1200px;
-    float: left; }
-  .post-blog .left-block {
-    width: 50%;
-    height: 50vh;
-    float: left; }
+    min-height: 50vh;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    padding: 5em 0; }
+    .post-blog .left-block .input-fields, .post-blog .right-block .input-fields {
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: center; }
+      .post-blog .left-block .input-fields input, .post-blog .right-block .input-fields input {
+        border: none;
+        border-bottom: 1px solid #CFDBC5;
+        font-family: "priori-sans",sans-serif;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 1.5em 2em;
+        text-transform: uppercase;
+        text-align: center;
+        width: 70%;
+        font-size: 0.8em;
+        letter-spacing: 3px;
+        box-sizing: border-box;
+        margin-bottom: 1em; }
+        .post-blog .left-block .input-fields input + input, .post-blog .right-block .input-fields input + input {
+          margin: 0; }
+        .post-blog .left-block .input-fields input[placeholder], .post-blog .right-block .input-fields input[placeholder] {
+          font-size: 0.8em;
+          letter-spacing: 3px; }
+  .post-blog .right-block .buttons {
+    margin: 0; }
+
+.credit {
+  width: 100%;
+  height: 100px;
+  background-color: #e7e9ed;
+  clear: both;
+  position: relative; }
+  .credit img#credit {
+    position: absolute;
+    right: 0;
+    left: 0;
+    top: 0;
+    bottom: 0;
+    margin: auto; }

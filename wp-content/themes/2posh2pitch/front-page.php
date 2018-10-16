@@ -8,7 +8,7 @@
                 <h2>Burnham Breck</h2>
                 <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra, dolor et lacinia ornare, nibh ante mollis enim, ac convallis libero sem id massa. Maecenas ligula purus, vulputate at massa quis, consequat pharetra urna. Duis eget orci euismod, molestie lorem vel, venenatis magna.</p>
                 <div class="buttons">
-                    <div class="button-blue"><p>Find out more</p><i class="fas fa-arrow-right"></i></div>
+                    <div class="button-blue"><p>Book & Info</p><i class="fas fa-arrow-right"></i></div>
                 </div>
             </div>
             <div class="venue-image">
@@ -49,6 +49,7 @@
                     <h2><span>Bell tent hire</span></h2>
                     <i class="fas fa-times"></i>
                 </div>
+                <div class="divider"></div>
                 <p>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra, dolor et lacinia ornare, nibh ante mollis enim, ac convallis libero sem id massa. Maecenas ligula purus, vulputate at massa quis, consequat pharetra urna. Duis eget orci euismod, molestie lorem vel, venenatis magna.
                 </p>
@@ -86,10 +87,9 @@
         <div class="blog-content">
             <i class="fas fa-times"></i>
             <div class="head-text">
-                <h3>Lorem ipsum dolor sit amet.</h3>
-                <div class="divider"></div>
                 <h2>12th January 2018</h2>
-                <i class="fas fa-ghost"></i>
+                <div class="divider"></div>
+                <h3>Lorem ipsum dolor sit amet.</h3>
             </div>
         </div>
     </div>
@@ -99,12 +99,41 @@
         <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/image.jpg" />
     </div>
     <div class="description-block">
+        <div class="slide-nav">
+            <i class="fas fa-arrow-circle-left"></i><i class="fas fa-arrow-circle-right"></i>
+        </div>
         <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
     </div>
 </section>
 <section class="post-blog">
-    <div class="left-block"></div>
-    <div class="right-block"></div>
+    <div class="left-block">
+        <div class="head-text">
+            <h1>Booked?</h1>
+            <h2><span>Select your pitch</span></h2>
+        </div>
+        <div class="buttons">
+            <div class="button-white"><p>Whitehall Farm</p><i class="fas fa-arrow-right"></i></div>
+            <div class="button-white"><p>Burnham Breck</p><i class="fas fa-arrow-right"></i></div>
+            <div class="button-blue"><p>Private Hire</p><i class="fas fa-arrow-right"></i></div>
+        </div>
+    </div>
+    <div class="right-block">
+        <div class="head-text">
+            <h1>Sign up</h1>
+            <h2><span>and receive latest offers</span></h2>
+        </div>
+        <div class="input-fields">
+            <input type="text" name="name" placeholder="Your Name" id="newsletter-name" />
+            <input type="email" name="email" placeholder="Your Email" id="newsletter-email" />
+            <div class="buttons">
+                <div class="button-blue"><p>Submit</p><i class="fas fa-arrow-right"></i></div>
+            </div>
+        </div>
+    </div>
 </section>
+<section class="credit">
+    <img src="http://www.thinkthirdrail.co.uk/img/symbol.svg" alt="Design and development by Thirdrail Creative" width="30" id="credit">
+</section>
+
 
 <?php get_footer(); ?>
