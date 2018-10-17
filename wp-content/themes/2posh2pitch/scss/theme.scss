@@ -30,7 +30,7 @@ h1 {
     letter-spacing: 5px;
     font-weight: 600;
     line-height: 1.414;
-    color: $title;
+    color: $dark-main;
     position: relative;
     z-index: 9999;
 }
@@ -40,7 +40,7 @@ h2 {
     font-size: 0.8em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color: $title;
+    color: $dark-main;
 }
 
 h3 {
@@ -48,7 +48,7 @@ h3 {
     font-family: "abril-text",serif;
     font-size: 1.414em;
     line-height: 1.414;
-    color: $title;
+    color: $dark-main;
 }
 
 .overlay {
@@ -159,8 +159,66 @@ nav {
         position: fixed;
         z-index: 100000;
         overflow: scroll;
+        font-family: "priori-sans",sans-serif;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: bold;
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239C92AC' fill-opacity='0.08'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+
+        li {
+            a {
+                color: $white;
+                // font-weight: bold;
+                text-decoration: none;
+                font-size: 2em;
+                line-height: 1.3;
+                &:hover {
+                    color: $dark-main;
+                }
+            }
+            .sub-menu {
+                display: none;
+            }
+            &.menu-item-has-children {
+                position: relative;
+                &::after {
+                    font-family: "Font Awesome 5 Free";
+                    font-weight: 900;
+                    content: "\f078";
+                    color: $white;
+                    position: absolute;
+                    right: -10%;
+                    top: 0;
+                    bottom: 0;
+                    margin: auto;
+                    display: flex;
+                    align-items: center;
+                }
+            }
+            &.current-menu-item {
+                a {
+                    color: $dark-main;
+                }
+            }
+        }
         &.active {
-            display: block;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            text-align: center;
+        }
+    }
+    .menu-main-navigation-container {
+        position: relative;
+        text-align: left;
+        &::before {
+            content: "";
+            position: absolute;
+            top: 0;
+            left: -20px;
+            background: $dark-main;
+            width: 5px;
+            height: 100%;
         }
     }
 }
@@ -360,7 +418,7 @@ nav {
                         i {
                             color: $light-main;
                             &:hover {
-                                color: $title;
+                                color: $dark-main;
                             }
                         }
                         &:hover {
@@ -494,7 +552,7 @@ nav {
         position: relative;
         width: 60%;
         p {
-            color: $title;
+            color: $dark-main;
             line-height: 1.4;
             &:first-of-type {
                 font-weight: bolder;
@@ -518,7 +576,7 @@ nav {
         p {
             font-family: "abril-text",serif;
             font-size: 2em;
-            color: $title;
+            color: $dark-main;
             position: relative;
             font-style: italic;
             &::before {
@@ -606,7 +664,7 @@ nav {
         z-index: 1;
         background-attachment: fixed;
         background-color: #cfdbc5;
-        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239C92AC' fill-opacity='0.28'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
+        background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='80' height='80' viewBox='0 0 80 80'%3E%3Cg fill='%239C92AC' fill-opacity='0.08'%3E%3Cpath fill-rule='evenodd' d='M11 0l5 20H6l5-20zm42 31a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM0 72h40v4H0v-4zm0-8h31v4H0v-4zm20-16h20v4H20v-4zM0 56h40v4H0v-4zm63-25a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM53 41a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-30 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm-28-8a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zM56 5a5 5 0 0 0-10 0h10zm10 0a5 5 0 0 1-10 0h10zm-3 46a3 3 0 1 0 0-6 3 3 0 0 0 0 6zm10 0a3 3 0 1 0 0-6 3 3 0 0 0 0 6zM21 0l5 20H16l5-20zm43 64v-4h-4v4h-4v4h4v4h4v-4h4v-4h-4zM36 13h4v4h-4v-4zm4 4h4v4h-4v-4zm-4 4h4v4h-4v-4zm8-8h4v4h-4v-4z'/%3E%3C/g%3E%3C/svg%3E");
     }
     .blog-box {
         width: 95%;
@@ -698,25 +756,25 @@ nav {
                 font-size: 2em;
                 color: $light-main;
                 &:hover {
-                    color: $title;
+                    color: $dark-main;
                 }
             }
         }
         p {
             font-size: 2em;
-            color: $title;
-            width: 80%;
+            color: $dark-main;
+            width: 70%;
             position: relative;
             text-align: center;
-            &::after {
-                content: "";
-                position: absolute;
-                bottom: -1em;
-                left: -30%;
-                height: 5px;
-                background: $light-main;
-                width: 70%;
-            }
+            // &::after {
+            //     content: "";
+            //     position: absolute;
+            //     bottom: -1em;
+            //     left: -30%;
+            //     height: 5px;
+            //     background: $light-main;
+            //     width: 70%;
+            // }
         }
     }
 }

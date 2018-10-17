@@ -28,41 +28,22 @@ add_action('wp_before_admin_bar_render', 'remove_admin_bar_logo');
 // WordPress custom title script
 
 function title_tag() {
-
-// is the current page a tag archive page?
-if (function_exists('is_tag') && is_tag()) {
-
-	// if so, display this custom title
-	echo 'Tag Archive for &quot;'.$tag.'&quot; - ';
-
-// or, is the page an archive page?
-} elseif (is_archive()) {
-
-	// if so, display this custom title
-	wp_title(''); echo ' Archive - ';
-
-// or, is the page a search page?
-} elseif (is_search()) {
-
-	// if so, display this custom title
-	echo 'Search for &quot;'.wp_specialchars($s).'&quot; - ';
-
-// or, is the page a single post or a literal page?
-} elseif (!(is_404()) && (is_single()) || (is_page())) {
-
-	// if so, display this custom title
-	wp_title(''); echo ' - ';
-
-// or, is the page an error page?
-} elseif (is_404()) {
-
-	// yep, you guessed it
-	echo 'Not Found - ';
-
+    if(is_home()) {
+        echo the_title(); echo ' - '; bloginfo('description');
+    } else {
+        bloginfo('name'); echo ' - '; bloginfo('description');
+    }
 }
-// finally, display the blog name for all page types
-bloginfo('name');
 
+
+// Register Nav
+function posh_register_menus() {
+    register_nav_menus(
+        array(
+	    'primary-menu' => __( 'Primary Menu', 'posh' ),
+	)
+    );
 }
+add_action( 'init', 'posh_register_menus' );
 
 ?>

@@ -101,7 +101,7 @@
         <div class="slide-nav">
             <i class="fas fa-arrow-circle-left"></i><i class="fas fa-arrow-circle-right"></i>
         </div>
-        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra, dolor et lacinia ornare, nibh ante mollis enim, ac convallis libero sem id massa.</p>
     </div>
 </section>
 
