@@ -23,5 +23,10 @@ jQuery(function($) {
                 $(".venue, .cta").stop(true).delay(1000).removeClass('active');
             }, 300);
         });
+
+        // Burger Icon
+        $(".burger-wrap").on("click", function() {
+            $(this).toggleClass("active");
+        });
     });
 });

@@ -97,11 +97,64 @@ h3 {
   margin: 1.5em 0; }
 
 #main-logo {
-  position: absolute;
-  left: 5%;
-  top: 2em;
   z-index: 1;
   width: 100px; }
+
+header {
+  position: absolute;
+  z-index: 1;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 90%;
+  height: 15%;
+  padding: 0 5%; }
+  header .burger-wrap {
+    display: flex; }
+    header .burger-wrap .burger {
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      flex-direction: column;
+      width: 50px;
+      height: 20px;
+      position: relative;
+      transition: all ease 200ms; }
+      header .burger-wrap .burger p {
+        opacity: 0;
+        position: absolute;
+        left: 0;
+        right: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        text-align: center;
+        color: white;
+        text-transform: uppercase;
+        letter-spacing: 3px;
+        font-weight: bold;
+        font-size: 0.9em;
+        display: flex;
+        justify-content: center;
+        align-items: center; }
+      header .burger-wrap .burger .line {
+        width: 50px;
+        height: 4px;
+        background: #ffffff;
+        transition: all ease 200ms; }
+    header .burger-wrap.active {
+      align-items: flex-start;
+      justify-content: space-between; }
+      header .burger-wrap.active .burger {
+        height: 30px; }
+      header .burger-wrap.active p {
+        opacity: 1; }
+      header .burger-wrap.active .line {
+        width: 50px; }
+        header .burger-wrap.active .line:nth-of-type(2) {
+          opacity: 0; }
+    header .burger-wrap:hover {
+      cursor: pointer; }
 
 .button-blue, .button-white {
   border: 1px solid #CFDBC5;
@@ -251,6 +304,10 @@ h3 {
           top: 20px;
           font-size: 1.2em;
           font-weight: bold; }
+          .banner .venue .venue-content .venue-desc p.close i {
+            color: #CFDBC5; }
+            .banner .venue .venue-content .venue-desc p.close i:hover {
+              color: #9a9185; }
           .banner .venue .venue-content .venue-desc p.close:hover {
             cursor: pointer; }
   .banner .cta {
@@ -561,6 +618,11 @@ h3 {
         .post-blog .left-block .input-fields input[placeholder], .post-blog .right-block .input-fields input[placeholder] {
           font-size: 0.8em;
           letter-spacing: 3px; }
+        .post-blog .left-block .input-fields input:focus, .post-blog .right-block .input-fields input:focus {
+          outline: none;
+          box-shadow: none;
+          background: #e7e9ed;
+          border: solid thin #CFDBC5; }
   .post-blog .right-block .buttons {
     margin: 0; }
 

@@ -13,4 +13,12 @@
 
 <header>
     <img src="<?php echo get_stylesheet_directory_uri();?>/assets/img/logo.svg" alt="logo" width="150" id="main-logo" />
+    <div class="burger-wrap">
+        <div class="burger">
+            <div class="line"></div>
+            <div class="line"></div>
+            <div class="line"></div>
+            <p class="burger-close">Close</p>
+        </div>
+    </div>
 </header>
