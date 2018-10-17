@@ -102,7 +102,6 @@ h3 {
 
 header {
   position: absolute;
-  z-index: 1;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -110,7 +109,10 @@ header {
   height: 15%;
   padding: 0 5%; }
   header .burger-wrap {
-    display: flex; }
+    display: flex;
+    position: fixed;
+    z-index: 200000;
+    right: 5%; }
     header .burger-wrap .burger {
       display: flex;
       align-items: flex-end;
@@ -155,6 +157,17 @@ header {
           opacity: 0; }
     header .burger-wrap:hover {
       cursor: pointer; }
+
+nav.main-nav {
+  width: 100vw;
+  height: 100vh;
+  background-color: #CFDBC5;
+  display: none;
+  position: fixed;
+  z-index: 100000;
+  overflow: scroll; }
+  nav.main-nav.active {
+    display: block; }
 
 .button-blue, .button-white {
   border: 1px solid #CFDBC5;
@@ -426,18 +439,8 @@ header {
       .pre-blog .right-block p::before {
         content: '“';
         position: absolute;
-        top: -70%;
-        margin: auto;
-        left: 0;
-        font-size: 5em;
-        color: #CFDBC5; }
-      .pre-blog .right-block p::after {
-        content: '-';
-        position: absolute;
-        bottom: -70%;
-        margin: auto;
-        left: 0;
-        font-size: 5em;
+        font-size: 200px;
+        line-height: 0;
         color: #CFDBC5; }
   .pre-blog .grey-block {
     width: 40%;
@@ -586,7 +589,6 @@ header {
   margin: 0 auto; }
   .post-blog .left-block, .post-blog .right-block {
     width: 50%;
-    min-height: 50vh;
     float: left;
     display: flex;
     align-items: center;
@@ -597,7 +599,8 @@ header {
       width: 100%;
       display: flex;
       flex-direction: column;
-      align-items: center; }
+      align-items: center;
+      margin-top: 60px; }
       .post-blog .left-block .input-fields input, .post-blog .right-block .input-fields input {
         border: none;
         border-bottom: 1px solid #CFDBC5;

@@ -27,6 +27,17 @@ jQuery(function($) {
         // Burger Icon
         $(".burger-wrap").on("click", function() {
             $(this).toggleClass("active");
+            if($(this).hasClass('active')) {
+                $("nav.main-nav").addClass('active');
+                $("body, html").css({
+                    "overflow" : "hidden",
+                });
+            } else {
+                $("nav.main-nav").removeClass('active');
+                $("body, html").css({
+                    "overflow" : "auto",
+                });
+            }
         });
     });
 });

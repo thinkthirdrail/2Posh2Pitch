@@ -53,7 +53,7 @@ h3 {
 
 .overlay {
     background-color: #a5b896;
-    background: $light-blue;
+    background: $light-main;
     opacity: 0.2;
     position: absolute;
     width: 100%;
@@ -71,7 +71,7 @@ h3 {
 .divider {
     width: 20%;
     height: 5px;
-    background-color: $light-blue;
+    background-color: $light-main;
     margin: 1.5em 0;
 }
 
@@ -82,7 +82,7 @@ h3 {
 
 header {
     position: absolute;
-    z-index: 1;
+    // z-index: 1;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -91,6 +91,9 @@ header {
     padding: 0 5%;
     .burger-wrap {
         display: flex;
+        position: fixed;
+        z-index: 200000;
+        right: 5%;
         .burger {
             display: flex;
             align-items: flex-end;
@@ -147,6 +150,21 @@ header {
     }
 }
 
+nav {
+    &.main-nav {
+        width: 100vw;
+        height: 100vh;
+        background-color: $light-main;
+        display: none;
+        position: fixed;
+        z-index: 100000;
+        overflow: scroll;
+        &.active {
+            display: block;
+        }
+    }
+}
+
 // Buttons
 
 %button-padding {
@@ -160,7 +178,7 @@ header {
         padding: 0;
         color: #B0BFA1;
     }
-    border: 1px solid $light-blue;
+    border: 1px solid $light-main;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -187,7 +205,7 @@ header {
 }
 
 .button-blue {
-    background-color: $light-blue;
+    background-color: $light-main;
     @extend %button-padding;
     margin: 1em 0;
 }
@@ -198,7 +216,7 @@ header {
     margin: 1em 0;
     transition: all ease 150ms;
     &:hover {
-        background-color: $light-blue;
+        background-color: $light-main;
         color: $white;
     }
 }
@@ -217,7 +235,7 @@ header {
 }
 
 .blue-block {
-    background-color: $light-blue;
+    background-color: $light-main;
     @extend %background-block;
     z-index: -1;
     top: 0;
@@ -262,7 +280,7 @@ header {
                 position: absolute;
                 width: 100%;
                 height: 5px;
-                background-color: $light-blue;
+                background-color: $light-main;
                 left: 0;
                 top: 0;
                 bottom: 0;
@@ -340,7 +358,7 @@ header {
                         font-size: 1.2em;
                         font-weight: bold;
                         i {
-                            color: $light-blue;
+                            color: $light-main;
                             &:hover {
                                 color: $title;
                             }
@@ -416,7 +434,7 @@ header {
                 font-weight: bold;
             }
             .seperate {
-                color: $light-blue;
+                color: $light-main;
             }
         }
         &:hover {
@@ -438,7 +456,7 @@ header {
         text-align: right;
         &::after {
             content: "";
-            background-color: $light-blue;
+            background-color: $light-main;
             width: 5px;
             height: 200px;
             position: absolute;
@@ -451,7 +469,7 @@ header {
 
 .pre-blog {
     // i {
-    //     color: $light-blue;
+    //     color: $light-main;
     // }
     min-height: 100vh;
     max-height: 1200px;
@@ -490,7 +508,7 @@ header {
             svg {
                 width: 10%;
                 path {
-                    fill: $light-blue;
+                    fill: $light-main;
                 }
             }
         }
@@ -506,21 +524,17 @@ header {
             &::before {
                 content: '“';
                 position: absolute;
-                top: -70%;
-                margin: auto;
-                left: 0;
-                font-size: 5em;
-                color: $light-blue;
+                font-size: 200px;
+                line-height: 0;
+                color: $light-main;
             }
-            &::after {
-                content: '-';
-                position: absolute;
-                bottom: -70%;
-                margin: auto;
-                left: 0;
-                font-size: 5em;
-                color: $light-blue;
-            }
+            // &::after {
+            //     content: '-';
+            //     position: absolute;
+            //     font-size: 200px;
+            //     line-height: 0;
+            //     color: #CFDBC5;
+            // }
         }
     }
     .grey-block {
@@ -544,7 +558,7 @@ header {
         position: relative;
         // padding-bottom: 2em;
         span {
-            // background: $light-blue;
+            // background: $light-main;
         }
         h2 {
             &::before {
@@ -587,7 +601,7 @@ header {
         height: 100%;
         left: 0;
         top: 0;
-        background-color: $light-blue;
+        background-color: $light-main;
         position: absolute;
         z-index: 1;
         background-attachment: fixed;
@@ -682,7 +696,7 @@ header {
             i {
                 padding: 5px;
                 font-size: 2em;
-                color: $light-blue;
+                color: $light-main;
                 &:hover {
                     color: $title;
                 }
@@ -700,7 +714,7 @@ header {
                 bottom: -1em;
                 left: -30%;
                 height: 5px;
-                background: $light-blue;
+                background: $light-main;
                 width: 70%;
             }
         }
@@ -717,7 +731,7 @@ header {
     }
     .left-block, .right-block {
         width: 50%;
-        min-height: 50vh;
+        // min-height: 50vh;
         float: left;
         display: flex;
         align-items: center;
@@ -730,6 +744,7 @@ header {
             display: flex;
             flex-direction: column;
             align-items: center;
+            margin-top: 60px;
             input {
                 border: none;
                 border-bottom: 1px solid #CFDBC5;
@@ -758,7 +773,7 @@ header {
                     outline: none;
                     box-shadow:none;
                     background: $light-grey;
-                    border: solid thin $light-blue;
+                    border: solid thin $light-main;
                 }
             }
         }
