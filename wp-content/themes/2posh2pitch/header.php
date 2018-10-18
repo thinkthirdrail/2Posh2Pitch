@@ -23,6 +23,8 @@
     </div>
 </header>
 
+<div class="dark-nav-bg"></div>
+
 <nav class="main-nav">
 <?php wp_nav_menu(); ?>
 </nav>

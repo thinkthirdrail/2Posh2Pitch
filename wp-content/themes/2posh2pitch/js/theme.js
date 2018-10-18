@@ -2,7 +2,6 @@ jQuery(function($) {
     $(document).ready(function() {
         $(window).on('scroll', function() {
             var x = $(window).scrollTop() / 10;
-            console.log(x);
             // $(".cta, .venue").css("transform", "translateY(-" + x +"%)");
             $(".tag").css("filter", "blur(" + (x / 5) +"px)");
             $(".tag").css("letter-spacing", 5 + $(window).scrollTop() / 200);
@@ -16,7 +15,7 @@ jQuery(function($) {
             }, 300);
         });
 
-        $(".banner p.close").on("click", function() {
+        $(".banner p.close, .overlay").on("click", function() {
             $(".venue-content").fadeOut();
             $(".banner .overlay").removeClass('active');
             setTimeout(function() {
@@ -39,5 +38,17 @@ jQuery(function($) {
                 });
             }
         });
+
+        var distance = $('.pre-blog').offset().top,
+            $window = $(window);
+
+        $window.scroll(function() {
+            if ( $window.scrollTop() >= distance ) {
+                $(".dark-nav-bg").fadeIn();
+            } else {
+                $(".dark-nav-bg").fadeOut();
+            }
+        });
+
     });
 });

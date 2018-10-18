@@ -100,6 +100,16 @@ h3 {
   z-index: 1;
   width: 100px; }
 
+.dark-nav-bg {
+  display: none;
+  background: #333333;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100px;
+  z-index: 9999; }
+
 header {
   position: absolute;
   display: flex;
@@ -107,7 +117,8 @@ header {
   align-items: center;
   width: 90%;
   height: 15%;
-  padding: 0 5%; }
+  padding: 0 5%;
+  transition: all ease 200ms; }
   header .burger-wrap {
     display: flex;
     position: fixed;
@@ -284,6 +295,8 @@ nav .menu-main-navigation-container {
     transition: opacity ease 300ms; }
     .banner .overlay.active {
       opacity: 0.8; }
+      .banner .overlay.active:hover {
+        cursor: pointer; }
   .banner i.fa-times {
     padding-bottom: 20px; }
   .banner .head-text {
