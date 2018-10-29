@@ -39,7 +39,8 @@ table {
 body {
   font-size: calc(12px + (18 - 12) * ((100vw - 300px) / (2000 - 300)));
   max-width: 2000px;
-  margin: 0 auto; }
+  margin: 0 auto;
+  overflow: auto; }
 
 p {
   font-size: 1em;
@@ -123,7 +124,8 @@ header {
     display: flex;
     position: fixed;
     z-index: 200000;
-    right: 5%; }
+    right: 5%;
+    mix-blend-mode: color-dodge; }
     header .burger-wrap .burger {
       display: flex;
       align-items: flex-end;
@@ -153,8 +155,10 @@ header {
       header .burger-wrap .burger .line {
         width: 50px;
         height: 4px;
-        background: #ffffff;
+        background: #9a9185;
         transition: all ease 200ms; }
+        header .burger-wrap .burger .line.active {
+          background: #9a9185; }
     header .burger-wrap.active {
       align-items: flex-start;
       justify-content: space-between; }
@@ -176,7 +180,7 @@ nav.main-nav {
   display: none;
   position: fixed;
   z-index: 100000;
-  overflow: scroll;
+  overflow: auto;
   font-family: "priori-sans",sans-serif;
   text-transform: uppercase;
   letter-spacing: 3px;
@@ -363,7 +367,7 @@ nav .menu-main-navigation-container {
         display: flex;
         justify-content: center;
         flex-direction: column;
-        overflow: scroll; }
+        overflow: auto; }
         .banner .venue .venue-content .venue-desc .buttons {
           margin-top: 1em; }
         .banner .venue .venue-content .venue-desc h2 {
@@ -534,8 +538,7 @@ nav .menu-main-navigation-container {
     position: absolute;
     z-index: 1;
     background-size: cover;
-    filter: grayscale(100%);
-    overflow: hidden; }
+    filter: grayscale(100%); }
   .home-blog .blue-block {
     width: 40%;
     height: 100%;

@@ -27,26 +27,30 @@ jQuery(function($) {
         $(".burger-wrap").on("click", function() {
             $(this).toggleClass("active");
             if($(this).hasClass('active')) {
+                // var $saved = $('.burger-wrap').clone();
                 $("nav.main-nav").addClass('active');
-                $("body, html").css({
+                $(".line").removeClass('active');
+                $("body").css({
                     "overflow" : "hidden",
                 });
             } else {
                 $("nav.main-nav").removeClass('active');
-                $("body, html").css({
+                // $('header').append($saved);
+                $("body").css({
                     "overflow" : "auto",
                 });
             }
         });
+
 
         var distance = $('.pre-blog').offset().top,
             $window = $(window);
 
         $window.scroll(function() {
             if ( $window.scrollTop() >= distance ) {
-                $(".dark-nav-bg").fadeIn();
+                $(".line").addClass('active');
             } else {
-                $(".dark-nav-bg").fadeOut();
+                $(".line").removeClass('active');
             }
         });
 
